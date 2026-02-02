@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wilson | Sporting Goods</title>
+    <!-- TailwindCSS -->
+    <link rel="stylesheet" href="/src/output.css" />
+    <!-- Remix Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      integrity="sha512-XcIsjKMcuVe0Ucj/xgIXQnytNwBttJbNjltBV18IOnru2lDPe9KRRyvCXw6Y5H415vbBLRm8+q6fmLUU7DfO6Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="font-helvetica">
+    <!-- Navbar -->
+    <header
+      class="fixed top-0 w-full py-4 flex justify-between bg-transparent items-center lg:flex"
+    >
+      <nav
+        class="container mx-auto px-6 py-2 flex items-center justify-between bg-transparent"
+      >
+        <div class="logo z-10 relative">
+          <a href="#" id="menu" class="uppercase text-xs group lg:hidden">
+            <img src="/assets/img/wilson-logo.png" alt="" class="w-30" />
+          </a>
+        </div>
+
+        <!-- <div class="hidden lg:flex lg:gap-x-6 lg:uppercase lg:text-xs">
+          <a href="">Approach</a>
+          <a href="">Search</a>
+          <a href="">Account</a>
+          <a href="">Rupiah</a>
+          <a href="">Cart</a>
+        </div> -->
+        <div class="flex flex-row gap-2">
+          <div
+            class="bg-gray-500/50 backdrop-blur-lg border border-white/20 rounded-full px-5 py-2 flex items-center justify-center"
+          >
+            <a
+              href="#"
+              class="uppercase text-[10px] text-white tracking-[0.2em] font-bold flex items-center gap-2"
+            >
+              Menu <i class="ri-add-line text-xs"></i>
+            </a>
+          </div>
+
+          <div
+            class="bg-gray-500/50 backdrop-blur-lg border border-white/20 rounded-full px-3 py-2 flex items-center justify-center"
+          >
+            <a href="#"><i class="ri-shopping-cart-line text-white"></i></a>
+          </div>
+          <div
+            class="bg-gray-500/50 backdrop-blur-lg border border-white/20 rounded-full px-3 py-2 flex items-center justify-center"
+          >
+            <a href="#"><i class="ri-user-line text-white"></i></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- <nav class="fixed top-0 w-full z-50 bg-transparent py-4">
+      <div class="container mx-auto px-10 flex items-center justify-between">
+        <a class="text-3xl font-semibold text-white tracking-wider" href="#"
+          >Jeep&reg;</a
+        >
+
+        <button class="lg:hidden text-white focus:outline-none">
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+
+        <div class="hidden lg:flex items-center flex-1 justify-end">
+          <ul class="flex items-center space-x-8 mr-12">
+            <li>
+              <a
+                href="#"
+                class="relative pb-1 font-medium text-white group transition duration-300"
+              >
+                Home
+                <span
+                  class="absolute bottom-0 left-2 right-2 h-1 bg-yellow-500 w-0 transition-all duration-300 group-hover:w-[calc(100%-16px)]"
+                ></span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="relative pb-1 font-medium text-white group transition duration-300"
+              >
+                About Jeep&reg;
+                <span
+                  class="absolute bottom-0 left-2 right-2 h-1 bg-yellow-500 w-0 transition-all duration-300 group-hover:w-[calc(100%-16px)]"
+                ></span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="relative pb-1 font-medium text-white group transition duration-300"
+                >Models
+                <span
+                  class="absolute bottom-0 left-2 right-2 h-1 bg-yellow-500 w-0 transition-all duration-300 group-hover:w-[calc(100%-16px)]"
+                ></span
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="relative pb-1 font-medium text-white group transition duration-300"
+                >Jeep&reg; Life
+                <span
+                  class="absolute bottom-0 left-2 right-2 h-1 bg-yellow-500 w-0 transition-all duration-300 group-hover:w-[calc(100%-16px)]"
+                ></span
+              ></a>
+            </li>
+          </ul>
+
+          <ul class="flex items-center space-x-6 border-l border-white/20 pl-8">
+            <li>
+              <a href="#"
+                ><img src="./assets/User.png" alt="User" class="w-6 h-6 invert"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./assets/Cart.png" alt="Cart" class="w-6 h-6 invert"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav> -->
+
+    <!-- Hero -->
+    <section
+      class="relative h-screen m-2 rounded-2xl overflow-hidden flex flex-col justify-end lg:justify-center pb-16 pt-84 lg:pt-48"
+    >
+      <video
+        autoplay
+        muted
+        loop
+        class="absolute inset-0 w-full h-full object-cover -z-10"
+      >
+        <source src="/assets/img/landing-page.mp4" type="video/mp4" />
+      </video>
+
+      <div class="container mx-auto px-10">
+        <h1
+          class="text-white text-4xl lg:text-[110px] font-semibold leading-tight uppercase"
+        >
+          <span class="opacity-30">#livelikean</span>athlete.
+        </h1>
+      </div>
+    </section>
+
+    <!-- About -->
+  </body>
+</html>

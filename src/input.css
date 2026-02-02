@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@theme {
+  --font-helvetica: Helvetica, Arial, "HelveticaNeue", "Helvetica Neue Light",
+    "HelveticaNeue-Light", "Lucida Grande", sans-serif;
+  --color-primary: #ed1a3a;
+}
