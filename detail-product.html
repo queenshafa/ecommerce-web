@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wilson | Sporting Goods</title>
+    <!-- TailwindCSS -->
+    <link rel="stylesheet" href="/src/output.css" />
+    <!-- Remix Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      integrity="sha512-XcIsjKMcuVe0Ucj/xgIXQnytNwBttJbNjltBV18IOnru2lDPe9KRRyvCXw6Y5H415vbBLRm8+q6fmLUU7DfO6Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Flowbite -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-helvetica">
+    <!-- Navbar -->
+    <div class="flex justify-between items-center">
+      <header
+        class="top-0 w-full py-4 flex justify-between bg-transparent items-center lg:flex overflow-hidden"
+      >
+        <nav
+          class="container px-6 py-2 flex items-center justify-between bg-transparent lg:mx-2"
+        >
+          <div class="logo z-10 relative">
+            <a href="#" id="menu" class="uppercase text-xs group">
+              <img src="/assets/img/wilson-logo.png" alt="" class="w-30" />
+            </a>
+          </div>
+
+          <!-- <div class="hidden lg:flex lg:gap-x-6 lg:uppercase lg:text-xs">
+          <a href="">Approach</a>
+          <a href="">Search</a>
+          <a href="">Account</a>
+          <a href="">Rupiah</a>
+          <a href="">Cart</a>
+        </div> -->
+          <div class="flex flex-row gap-2">
+            <!-- Navbar Mobile -->
+            <div
+              class="bg-gray-500/50 backdrop-blur-lg border border-white/20 rounded-full px-5 py-2 flex items-center justify-center lg:hidden"
+            >
+              <a
+                href="#"
+                class="uppercase text-[10px] text-white tracking-[0.2em] font-bold flex items-center gap-2"
+              >
+                Menu <i class="ri-add-line text-xs"></i>
+              </a>
+            </div>
+
+            <!-- Navbar Desktop -->
+            <div
+              class="bg-gray-500/50 backdrop-blur-lg border border-white/20 rounded-full px-5 py-2 flex items-center justify-center"
+            >
+              <a
+                href="#"
+                class="uppercase text-[10px] text-white tracking-[0.2em] font-bold flex items-center gap-2"
+              >
+                Menu <i class="ri-add-line text-xs"></i>
+              </a>
+            </div>
+
+            <div
+              class="bg-gray-500/50 backdrop-blur-lg border border-white/20 rounded-full px-3 py-2 flex items-center justify-center"
+            >
+              <a href="#"><i class="ri-shopping-cart-line text-white"></i></a>
+            </div>
+            <div
+              class="bg-gray-500/50 backdrop-blur-lg border border-white/20 rounded-full px-3 py-2 flex items-center justify-center"
+            >
+              <a href="#"><i class="ri-user-line text-white"></i></a>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </div>
+
+    <section class="px-4 py-8 lg:relative lg:px-10">
+      <div class="block lg:flex">
+        <div class="w-screen">
+          <img
+            src="./assets/img/blade-98-v9-tennis-racket.jpg"
+            alt=""
+            class="border border-primary"
+          />
+        </div>
+        <div class="mx-5 mt-6 w-full lg:mx-0">
+          <span class="bg-primary text-white text-sm font-medium px-2 py-1"
+            >In Stock</span
+          >
+          <h1 class="uppercase text-4xl font-semibold my-4">
+            Blade 98 V9 Tennis Racket
+          </h1>
+          <span class="bg-gray-100 text-black text-sm font-medium px-2 py-1"
+            >$269.00</span
+          >
+          <a
+            href="https://www.wilson.com/en-us/product/blade-100-v9-frm-wr15150"
+            target="_blank"
+          >
+            <button
+              class="w-full bg-primary text-white text-left mt-6 px-4 py-3 rounded-lg cursor-pointer"
+            >
+              <i class="ri-corner-down-right-fill"></i> Buy Now
+            </button>
+          </a>
+          <div class="border-b border-gray-300 mt-3"></div>
+          <p class="mt-4 text-sm text-gray-700 tracking-tight">
+            A sharper, more stable Blade that has a more forgiving sweet spot
+            and provides ultimate control and feel.
+          </p>
+          <div class="text-sm mt-5">
+            <p>
+              <i class="ri-artboard-2-line mr-1.5"></i>Sensation 16G Natural +
+              $11.50
+            </p>
+            <p><i class="ri-expand-vertical-line mr-1.5"></i>51 lb / 23 kg</p>
+            <p><i class="ri-expand-horizontal-line mr-1.5"></i>51 lb / 23 kg</p>
+            <p>
+              <i class="ri-checkbox-fill mr-1.5"></i>Red "W" (non-black string)
+              or White "W" (black string)
+            </p>
+          </div>
+          <div class="bg-primary text-white mt-8 p-2">
+            <div class="flex justify-between p-1 mb-8">
+              <div>
+                <h3 class="text-xl">New Everyday <br />Low Pricing</h3>
+              </div>
+              <div class="uppercase">
+                <p class="text-sm">Limited Time Promotion</p>
+              </div>
+            </div>
+            <p class="text-sm pt-2 border-t border-white">
+              Take advantage of lowest price at checkout.
+            </p>
+          </div>
+          <!-- Accordion -->
+          <div
+            id="accordion-flush"
+            data-accordion="collapse"
+            data-active-classes="bg-neutral-primary text-heading"
+            data-inactive-classes="text-body"
+          >
+            <!-- Accordion 1 -->
+            <h2 id="accordion-flush-heading-1">
+              <button
+                type="button"
+                class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-body border-b border-gray-500 border-default gap-3"
+                data-accordion-target="#accordion-flush-body-1"
+                aria-expanded="true"
+                aria-controls="accordion-flush-body-1"
+              >
+                <span class="uppercase text-xs hover:underline"
+                  >What are the features?</span
+                >
+                <svg
+                  data-accordion-icon
+                  class="w-5 h-5 rotate-180 shrink-0"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m5 15 7-7 7 7"
+                  />
+                </svg>
+              </button>
+            </h2>
+            <div
+              id="accordion-flush-body-1"
+              class="hidden"
+              aria-labelledby="accordion-flush-heading-1"
+            >
+              <div
+                class="flex flex-col gap-y-3 py-5 border-b border-gray-500 border-default text-body text-sm"
+              >
+                <p>
+                  Parallel Drilling <br />
+                  Grommet construction provides a consistent, more forgiving
+                  string bed response while dramatically increasing the sweet
+                  spot.
+                </p>
+                <p>
+                  FORTYFIVE°
+                  <br />
+                  Patent-protected frame layup produces more
+                  connected-to-the-ball feel while better complementing the more
+                  modern, vertical swing path. Material increases both
+                  flexibility and stability without compromise through the
+                  swing.
+                </p>
+                <p>
+                  Top Grip Taper <br />
+                  Tapered grip lends better feel for top-handed grip placement
+                  on two-handed backhand.
+                </p>
+                <p>
+                  DirectConnect <br />
+                  Carbon fiber handle extends to directly connect with end cap
+                  for improved feel and enhanced torsional stability.
+                </p>
+                <p>
+                  StableFeel <br />
+                  The new Blade technology that provides an enhanced, firmer
+                  feel that increases stability and creates a more
+                  connected-to-the-ball feel. Designed with avid players in
+                  mind, this "sharper Blade" is ideal for those seeking to
+                  improve their game.
+                </p>
+                <p>
+                  Click-and-Go <br />
+                  Bumper and grommet system that enhances durability and
+                  application through a superior fit.
+                </p>
+              </div>
+            </div>
+            <!-- Accordion 2 -->
+            <h2 id="accordion-flush-heading-2">
+              <button
+                type="button"
+                class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-body border-b border-gray-500 border-default gap-3"
+                data-accordion-target="#accordion-flush-body-2"
+                aria-expanded="false"
+                aria-controls="accordion-flush-body-2"
+              >
+                <span class="uppercase text-xs hover:underline">Overview</span>
+                <svg
+                  data-accordion-icon
+                  class="w-5 h-5 rotate-180 shrink-0"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m5 15 7-7 7 7"
+                  />
+                </svg>
+              </button>
+            </h2>
+            <div
+              id="accordion-flush-body-2"
+              class="hidden"
+              aria-labelledby="accordion-flush-heading-2"
+            >
+              <div class="py-5 border-b border-default text-body">
+                <p class="mb-2">
+                  With nearly 20 years of dominance on the tennis court,
+                  Wilson's Blade performance rackets continue to be the
+                  preferred choice of avid competitors looking for ultimate
+                  control, feel and stability. The Blade 100 v9 turns heads with
+                  both its striking Emerald Night finish and its highly-tuned
+                  performance. Patented FORTYFIVE° carbon construction increases
+                  flexibility and stability to give the Blade its signature
+                  feel. Its slightly heavier frame and open 16x19 string pattern
+                  help advanced players generate all the power they need while
+                  providing ready access to devastating spin.
+                </p>
+                <p class="text-sm italic">
+                  Select from the stringing options and the Wilson team will
+                  string the racket for you. Strung rackets ship in 2-3 weeks.
+                  *Custom-strung rackets cannot be canceled or returned. **Pros
+                  often customize the racket they use. Racket specifications on
+                  endorsed consumer models may vary from the models used by Pros
+                  for match-play.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video -->
+      <div class="mt-20">
+        <video
+          src="./assets/img/landing-page.mp4"
+          autoplay
+          loop
+          muted
+          class="rounded-2xl lg:w-full lg:relative"
+        ></video>
+      </div>
+
+      <div
+        class="lg:absolute lg:flex lg:gap-x-6 lg:bg-white lg:bottom-0 lg:w-2/3 lg:rounded-tr-2xl lg:p-10"
+      >
+        <div class="mt-6">
+          <h2
+            class="text-5xl font-medium text-left tracking-wide lg:text-2xl border-b border-b-gray-400 pb-6"
+          >
+            Energize Your Day, Support Your Metabolism
+          </h2>
+
+          <p class="font-light mt-4">
+            Carbon fiber handle extends to directly connect with end cap for
+            improved feel and enhanced torsional stability.
+          </p>
+          <button
+            class="mt-6 uppercase bg-gray-100 py-3 px-8 rounded-full font-medium text-xs hover:bg-[#696159] hover:border-[#696159] hover:text-white transform duration-300 cursor-pointer"
+          >
+            Get Started
+          </button>
+        </div>
+        <div class="mt-18 lg:mt-2">
+          <h2
+            class="text-5xl font-medium text-left tracking-wide mt-6 lg:text-2xl border-b border-b-gray-400 pb-4"
+          >
+            Benefits
+          </h2>
+          <p class="font-light mt-4">
+            Bumper and grommet system that enhances durability and application
+            through a superior fit.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="absolute w-full h-4 bg-white rounded-b-4xl lg:mt-6"></div>
+
+    <!-- Footer -->
+    <footer
+      class="relative bg-primary pt-10 px-4 pb-4 text-white flex flex-col gap-y-10 lg:flex-row lg:justify-between lg:relative lg:py-20"
+    >
+      <!-- atas -->
+      <div>
+        <a href="#"
+          ><img
+            src="/assets/img/wilson-logo.png"
+            class="bg-white w-1/2 p-4 rounded-2xl"
+            alt=""
+        /></a>
+        <p class="text-7xl font-semibold mt-4">Become an Insider.</p>
+        <h1 class="uppercase text-sm font-semibold mt-4">
+          Be the first to hear about the latest products, sales and events from
+          Wilson.
+        </h1>
+        <form action="" class="relative">
+          <input
+            type="email"
+            class="mt-8 border w-full text-primary p-3 rounded-full placeholder:text-xs focus:outline-none focus:ring-0 lg:w-1/2"
+            placeholder="Email Address"
+          />
+          <button class="absolute right-4 bottom-3 lg:">
+            <i class="ri-arrow-right-line text-primary"></i>
+          </button>
+        </form>
+        <p class="text-[10px] mt-1">
+          By signing up, you agree to our Privacy Policy.
+        </p>
+      </div>
+      <!-- bawah -->
+      <div
+        class="grid grid-cols-2 justify-between gap-y-16 lg:flex lg:gap-x-20"
+      >
+        <!-- Item 1 -->
+        <div>
+          <p class="text-lg font-semibold mb-3">Contact Us</p>
+          <div class="flex flex-col text-xs gap-y-3">
+            <a href="#"
+              >Our Email<br />
+              <u>wilsoncssea@gmail.com</u></a
+            >
+            <a href="#">1-800-401-7967</a>
+            <a href="#"
+              >130 E. Randolph St, Suite 600, Chicago, Illinois 60601, USA</a
+            >
+          </div>
+        </div>
+        <!-- Item 2 -->
+        <div>
+          <p class="text-lg font-semibold mb-3">Resources</p>
+          <div class="flex flex-col text-xs gap-y-3">
+            <a href="#">Check Order Status</a>
+            <a href="#">Start a Return</a>
+            <a href="#">Submit a Warranty Request</a>
+            <a href="#">Check Gift Card Balance</a>
+            <a href="#">FAQ</a>
+          </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="hidden lg:block">
+          <p class="text-lg font-semibold mb-3">Follow Us</p>
+          <div class="flex flex-col text-xs gap-y-3 capitalize">
+            <a href="#"
+              >Instagram <i class="ri-arrow-right-up-line font-bold text-sm"></i
+            ></a>
+            <a href="#"
+              >TikTok <i class="ri-arrow-right-up-line font-bold text-sm"></i
+            ></a>
+            <a href="#"
+              >Facebook <i class="ri-arrow-right-up-line font-bold text-sm"></i
+            ></a>
+            <a href="#"
+              >YouTube <i class="ri-arrow-right-up-line font-bold text-sm"></i
+            ></a>
+            <a href="#"
+              >Twitter/X <i class="ri-arrow-right-up-line font-bold text-sm"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <p class="text-sm border-t pt-4">
+        &copy; 2025 Wilson Sporting Goods All rights reserved.
+      </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/gsap.min.js"></script>
+  </body>
+</html>

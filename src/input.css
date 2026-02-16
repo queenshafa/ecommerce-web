@@ -1,6 +1,42 @@
 @import "tailwindcss";
+/* @plugin "daisyui"; */
+
 @theme {
   --font-helvetica: Helvetica, Arial, "HelveticaNeue", "Helvetica Neue Light",
     "HelveticaNeue-Light", "Lucida Grande", sans-serif;
   --color-primary: #ed1a3a;
+  --animate-marquee: marquee 20s linear infinite;
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+@layer components {
+  .clip-circle {
+    clip-path: circle(0% at 50% 50%);
+  }
+
+  .category-card {
+    /* Hapus bg-primary di sini supaya tidak dobel */
+    @apply relative z-10 uppercase flex justify-between items-center text-white border-t border-white px-8 py-10 transition-colors duration-300 cursor-pointer;
+  }
+
+  /* Hilangkan border-t saat card di-hover agar tidak terlihat menumpuk di atas background merah */
+  .category-card:hover {
+    border-color: transparent;
+  }
+
+  /* Item terakhir biasanya butuh border bawah juga kalau mau rapi */
+  .category-card:last-child {
+    @apply border-b border-white;
+  }
+
+  .category-card:hover + .category-card {
+    border-top-color: transparent;
+  }
 }
