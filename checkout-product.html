@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wilson | Sporting Goods</title>
+    <!-- TailwindCSS -->
+    <link rel="stylesheet" href="/src/output.css" />
+    <!-- Remix Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      integrity="sha512-XcIsjKMcuVe0Ucj/xgIXQnytNwBttJbNjltBV18IOnru2lDPe9KRRyvCXw6Y5H415vbBLRm8+q6fmLUU7DfO6Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Flowbite -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-helvetica">
+    <header class="absolute top-0 w-full py-4 z-50">
+      <nav
+        class="container mx-auto px-6 py-2 flex items-center justify-between bg-transparent lg:mx-2"
+      >
+        <div class="logo z-10 relative">
+          <a href="index.html" class="uppercase text-xs group">
+            <img
+              src="/assets/img/wilson-logo.png"
+              alt="Wilson Logo"
+              class="w-30"
+            />
+          </a>
+        </div>
+
+        <div class="flex flex-row gap-2 items-center">
+          <div
+            class="bg-gray-500/50 backdrop-blur-lg border border-white/20 rounded-full px-5 py-2 flex items-center justify-center cursor-pointer hover:bg-gray-600/50 transition-all"
+          >
+            <a
+              href="#"
+              class="uppercase text-[10px] text-white tracking-[0.2em] font-bold flex items-center gap-2"
+            >
+              Menu <i class="ri-add-line text-xs"></i>
+            </a>
+          </div>
+
+          <div
+            onclick="toggleDrawer()"
+            class="bg-gray-500/50 backdrop-blur-lg border border-white/20 rounded-full px-3 py-2 flex items-center justify-center cursor-pointer hover:bg-gray-600/50 transition-all"
+          >
+            <i class="ri-shopping-cart-line text-white"></i>
+          </div>
+
+          <div
+            class="bg-gray-500/50 backdrop-blur-lg border border-white/20 rounded-full px-3 py-2 flex items-center justify-center cursor-pointer hover:bg-gray-600/50 transition-all"
+          >
+            <a href="login.html"><i class="ri-user-line text-white"></i></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div
+      id="cart-overlay"
+      onclick="toggleDrawer()"
+      class="fixed inset-0 bg-black/60 z-[99] hidden opacity-0 transition-opacity duration-300"
+    ></div>
+
+    <div
+      id="cart-drawer"
+      class="fixed top-0 right-0 z-[100] h-screen w-full sm:w-[450px] bg-white shadow-2xl translate-x-full transition-transform duration-300 ease-in-out"
+    >
+      <div class="flex items-center justify-between p-6 border-b">
+        <h2 class="text-xl font-bold text-gray-900">Shopping Cart</h2>
+        <button
+          onclick="toggleDrawer()"
+          class="p-2 text-gray-500 hover:text-black transition-colors"
+        >
+          <i class="ri-close-line text-2xl"></i>
+        </button>
+      </div>
+
+      <div class="h-[calc(100vh-200px)] overflow-y-auto p-6 space-y-6">
+        <div class="flex items-start gap-4 border-b border-gray-100 pb-6">
+          <div
+            class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200 bg-gray-50"
+          >
+            <img
+              src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front.svg"
+              alt="Product"
+              class="h-full w-full object-contain p-2"
+            />
+          </div>
+          <div class="flex flex-1 flex-col">
+            <div class="flex justify-between text-base font-bold text-gray-900">
+              <h3 class="truncate w-40"><a href="#">Blade 100 V9 Racket</a></h3>
+              <p class="ml-4">$240.00</p>
+            </div>
+            <p class="mt-1 text-sm text-gray-500 font-medium">
+              Series 9 • Tennis
+            </p>
+            <div class="flex flex-1 items-end justify-between mt-2">
+              <div class="flex items-center border border-gray-300 rounded-lg">
+                <button class="px-3 py-1 hover:bg-gray-100">-</button>
+                <span class="px-3 py-1 text-sm font-semibold">1</span>
+                <button class="px-3 py-1 hover:bg-gray-100">+</button>
+              </div>
+              <button
+                type="button"
+                class="text-xs font-bold text-red-600 uppercase tracking-wider hover:text-red-800"
+              >
+                Remove
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="mx-auto px-6 py-8 mt-12">
+      <p
+        class="text-center text-xs font-semibold text-gray-500 uppercase tracking-widest mb-4"
+      >
+        Express Checkout
+      </p>
+
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
+        <button
+          class="bg-[#5a31f4] py-3 rounded-lg flex justify-center items-center hover:opacity-90 transition"
+        >
+          <i class="ri-refund-fill text-white"></i>
+        </button>
+        <button
+          class="bg-[#ffc439] py-3 rounded-lg flex justify-center items-center hover:opacity-90 transition"
+        >
+          <i class="ri-paypal-fill text-white"></i>
+        </button>
+        <button
+          class="bg-black py-3 rounded-lg flex justify-center items-center hover:opacity-90 transition border border-gray-800"
+        >
+          <i class="ri-wallet-fill text-white"></i>
+        </button>
+      </div>
+
+      <div class="relative flex items-center py-8">
+        <div class="flex-grow border-t border-gray-300"></div>
+        <span class="flex-shrink mx-4 text-xs font-bold text-gray-400 uppercase"
+          >OR</span
+        >
+        <div class="flex-grow border-t border-gray-300"></div>
+      </div>
+    </section>
+
+    <main class="mx-auto px-6 space-y-10 pb-20">
+      <div>
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-lg font-bold text-gray-900">Contact</h2>
+          <a href="#" class="text-xs text-blue-600 underline">Log in</a>
+        </div>
+        <input
+          type="email"
+          placeholder="Email"
+          class="w-full p-3.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+        />
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-gray-900 mb-4">Delivery</h2>
+        <div class="grid grid-cols-1 gap-3">
+          <select
+            class="w-full p-3.5 border border-gray-300 rounded-lg bg-white appearance-none outline-none"
+          >
+            <option>United States</option>
+          </select>
+
+          <div class="grid grid-cols-2 gap-3">
+            <input
+              type="text"
+              placeholder="First name (optional)"
+              class="p-3.5 border border-gray-300 rounded-lg outline-none"
+            />
+            <input
+              type="text"
+              placeholder="Last name"
+              class="p-3.5 border border-gray-300 rounded-lg outline-none"
+            />
+          </div>
+
+          <div class="relative">
+            <input
+              type="text"
+              placeholder="Address"
+              class="w-full p-3.5 border border-gray-300 rounded-lg outline-none pr-10"
+            />
+            <i class="ri-search-line absolute right-3 top-4 text-gray-400"></i>
+          </div>
+
+          <input
+            type="text"
+            placeholder="City"
+            class="w-full p-3.5 border border-gray-300 rounded-lg outline-none"
+          />
+
+          <div class="grid grid-cols-2 gap-3">
+            <select
+              class="p-3.5 border border-gray-300 rounded-lg bg-white outline-none"
+            >
+              <option>State</option>
+            </select>
+            <input
+              type="text"
+              placeholder="ZIP code"
+              class="p-3.5 border border-gray-300 rounded-lg outline-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="pt-6 border-t border-gray-100">
+        <button
+          class="flex items-center gap-2 border border-gray-200 px-4 py-2 rounded-lg text-sm font-bold text-gray-800 hover:bg-gray-50 transition mb-6"
+        >
+          <i class="ri-price-tag-3-line"></i> Add discount
+        </button>
+
+        <div class="flex justify-between items-center">
+          <div class="flex items-center gap-4">
+            <div
+              class="w-14 h-14 bg-gray-50 border border-gray-200 rounded-lg p-1"
+            >
+              <img
+                src="./assets/img/blade-98-v9-tennis-racket.jpg"
+                class="w-full h-full object-contain"
+                alt="Total Item"
+              />
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 text-xl">Total</h4>
+              <p class="text-sm text-gray-500">1 item</p>
+            </div>
+          </div>
+          <div class="text-right">
+            <div class="flex items-center gap-1 justify-end">
+              <span class="text-xs font-bold text-gray-400 uppercase">USD</span>
+              <span class="text-2xl font-black text-gray-900">$50.99</span>
+              <i class="ri-arrow-down-s-line text-gray-400"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="bg-gray-50 p-4 rounded-xl flex justify-between items-center text-sm"
+      >
+        <span class="text-gray-600 font-medium"
+          >Recurring subtotal $50.99 every week</span
+        >
+        <i class="ri-question-line text-gray-400"></i>
+      </div>
+
+      <div class="space-y-6">
+        <button
+          class="w-full bg-primary text-white font-black py-5 rounded-2xl text-xl transition shadow-xl shadow active:scale-[0.98]"
+        >
+          Pay now
+        </button>
+
+        <p class="text-[11px] text-gray-400 text-center leading-relaxed px-4">
+          One or more items in your cart is a deferred or recurring purchase. By
+          continuing with your payment, you agree that your payment method will
+          automatically be charged at the price and frequency listed on this
+          page until it ends or you cancel. All cancellations are subject to the
+          <a href="#" class="underline hover:text-gray-600"
+            >cancellation policy</a
+          >.
+        </p>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="bg-primary pt-10 px-4 pb-4 text-white flex flex-col gap-y-10 lg:flex-row lg:justify-between lg:relative lg:py-20"
+    >
+      <!-- atas -->
+      <div>
+        <a href="#"
+          ><img
+            src="/assets/img/wilson-logo.png"
+            class="bg-white w-1/2 p-4 rounded-2xl"
+            alt=""
+        /></a>
+        <p class="text-7xl font-semibold mt-4">Become an Insider.</p>
+        <h1 class="uppercase text-sm font-semibold mt-4">
+          Be the first to hear about the latest products, sales and events from
+          Wilson.
+        </h1>
+        <form action="" class="relative">
+          <input
+            type="email"
+            class="mt-8 border w-full text-primary p-3 rounded-full placeholder:text-xs focus:outline-none focus:ring-0 lg:w-1/2"
+            placeholder="Email Address"
+          />
+          <button class="absolute right-4 bottom-3 lg:">
+            <i class="ri-arrow-right-line text-primary"></i>
+          </button>
+        </form>
+        <p class="text-[10px] mt-1">
+          By signing up, you agree to our Privacy Policy.
+        </p>
+        <p class="text-sm border-t pt-4 mt-4">
+          &copy; 2025 Wilson Sporting Goods All rights reserved.
+        </p>
+      </div>
+      <!-- bawah -->
+      <div
+        class="grid grid-cols-2 justify-between gap-y-16 lg:flex lg:gap-x-20"
+      >
+        <!-- Item 1 -->
+        <div>
+          <p class="text-lg font-semibold mb-3">Contact Us</p>
+          <div class="flex flex-col text-xs gap-y-3">
+            <a href="#"
+              >Our Email<br />
+              <u>wilsoncssea@gmail.com</u></a
+            >
+            <a href="#">1-800-401-7967</a>
+            <a href="#"
+              >130 E. Randolph St, Suite 600, Chicago, Illinois 60601, USA</a
+            >
+          </div>
+        </div>
+        <!-- Item 2 -->
+        <div>
+          <p class="text-lg font-semibold mb-3">Resources</p>
+          <div class="flex flex-col text-xs gap-y-3">
+            <a href="#">Check Order Status</a>
+            <a href="#">Start a Return</a>
+            <a href="#">Submit a Warranty Request</a>
+            <a href="#">Check Gift Card Balance</a>
+            <a href="#">FAQ</a>
+          </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="hidden lg:block">
+          <p class="text-lg font-semibold mb-3">Follow Us</p>
+          <div class="flex flex-col text-xs gap-y-3 capitalize">
+            <a href="#"
+              >Instagram <i class="ri-arrow-right-up-line font-bold text-sm"></i
+            ></a>
+            <a href="#"
+              >TikTok <i class="ri-arrow-right-up-line font-bold text-sm"></i
+            ></a>
+            <a href="#"
+              >Facebook <i class="ri-arrow-right-up-line font-bold text-sm"></i
+            ></a>
+            <a href="#"
+              >YouTube <i class="ri-arrow-right-up-line font-bold text-sm"></i
+            ></a>
+            <a href="#"
+              >Twitter/X <i class="ri-arrow-right-up-line font-bold text-sm"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
